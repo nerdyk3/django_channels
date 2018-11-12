@@ -25,7 +25,7 @@ SECRET_KEY = 'sb&^27slu!2k9*$7*3q!_#mxgkmu&pon=b^l_j3492+zykcdtd'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -70,7 +70,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'channel.wsgi.application'
+ASGI_APPLICATION = 'channel.wsgi.application'
 
 
 # Database
@@ -111,7 +111,7 @@ CHANNEL_LAYERS = {
         'CONFIG': {
             'hosts': [('localhost', 6379)],
         },
-        'ROUTING': 'channel.routing.channel_routing',
+        'ROUTING': 'channels.routing.channel_routing',
     }
 }
 
