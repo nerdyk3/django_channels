@@ -3,6 +3,7 @@
 {% block content %}
 <a href="{% url 'channel_example:log_out' %}">Log out</a>
   <br>
+  <h1>Channel online/offline/Request in/out</h1>
   <ul>
     {% for user in users %}
       <!-- NOTE: We escape HTML to prevent XSS attacks. -->
